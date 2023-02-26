@@ -124,8 +124,8 @@ a {
     display: flex;
     justify-content: space-between;
     min-height: 70vh;
+    max-height: 70vh;
     background: linear-gradient(90deg, #F1F3F8 70%, #c04106 30%);
-    white-space: nowrap;
 }
 
 .investimentos .left {
@@ -136,15 +136,18 @@ a {
 }
 
 .investimentos .rigth {
-    padding: 4rem 0;
-    overflow: hidden;
+    padding: 2rem 0;
+    
 }
 
 .investimentos .rigth img {
-    width: 650px;
+    width: 400px;
     border-radius: 10px;
     box-shadow: 60px -7px 78px -56px rgba(0,0,0,0.65);
+    display: flex;
+    margin-right: 65px;
 }
+
 
 .oportunidades {
     background: linear-gradient(180deg, #fff 40%, #DCDEE2 40%);
