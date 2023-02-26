@@ -296,8 +296,12 @@ a {
 }
 
 @media (max-width: 1024px) {
+    
     .consultor {
         background-image: url(../images/mainBackMobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
     }
     .colabore {
         flex-wrap: wrap;
