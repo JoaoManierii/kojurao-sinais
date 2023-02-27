@@ -29,27 +29,38 @@ a {
 }
 
 .consultor {
-    background-image: url(../images/MainBackground.png);
-    background-size: cover;
+    background: linear-gradient(to right, rgba(255,255,255,0.82) 0%, rgba(231,58,41,1) 96%, rgba(231,56,39,1) 97%);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     min-height: 70vh;
     padding: 0 6rem;
     gap: 2.25rem;
 }
 
+.consultor .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.consultor .right img {
+    width: 500px;
+}
+
 .alimentos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     min-height: 70vh;
     background: rgb(236, 233, 233);
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .alimentos .left {
     display: flex;
     flex-direction: column;
+    max-width: 1000px;
     gap: 25px;
     padding: 6rem;
 }
@@ -60,16 +71,20 @@ a {
 }
 
 .alimentos .rigth img {
-    width: 800px;
-    margin-right: -40px;
-    box-shadow: 17px 6px 45px -15px rgba(0,0,0,0.75);
+    width: 500px;
+    box-shadow: inset 0px 0px 45px -17px rgba(0,0,0,0.75);
+    border-radius: 20px;
 }
 
 .lista {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
     padding: 4rem 3rem;
     background-color: #F1F3F8;
+    gap: 50px;
 }
 
 .lista h4 {
@@ -77,15 +92,26 @@ a {
     line-height: 2rem;
     font-weight: 500;
     word-wrap: break-word;
+    text-align: center;
 }
 
-.lista h6 {
+.lista .itens {
+    display: flex;
+    gap: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lista .itens h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.125rem;
     line-height: 1.75rem;
     font-weight: inherit;
     word-wrap: break-word;
-    display: flex;
-    align-items: center;
     gap: 7px;
 }
 
@@ -101,15 +127,15 @@ a {
 
 .colabore  {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding: 50px;
-    gap: 50px;
     min-height: 70vh;
+    gap: 40px;
 }
 
 .colabore .video {
-    width: 50rem;
+    width: 300px;
     border-radius: .5rem;
     box-shadow: 17px 6px 45px -15px rgba(0,0,0,0.75);
 }
@@ -117,6 +143,7 @@ a {
 .colabore .texts {
     display: flex;
     flex-direction: column;
+    max-width: 500px;
     gap: 2rem;
 }
 
@@ -124,20 +151,19 @@ a {
     display: flex;
     justify-content: space-between;
     min-height: 70vh;
-    max-height: 70vh;
-    background: linear-gradient(90deg, #F1F3F8 70%, #c04106 30%);
+    background: linear-gradient(3000deg, #F1F3F8 50%, #c04106 50%);
 }
 
 .investimentos .left {
     display: flex;
     flex-direction: column;
+    max-width: 900px;
     gap: 25px;
     padding: 6rem;
 }
 
 .investimentos .rigth {
     padding: 2rem 0;
-    
 }
 
 .investimentos .rigth img {
@@ -284,41 +310,71 @@ a {
 }
 
 @media (max-width: 1440px) { 
-    .colabore .video {
-        width: 40rem;
+    .corujao {
+        font-size: 4.25rem;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    .consultor .right img {
+        width: 300px;
     }
 }
 
 @media (max-width: 1366px) {
-    .colabore .video {
-        width: 35rem;
+    .alimentos {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .alimentos .left {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 1080px) {
+    .corujao {
+        font-size: 3.80rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+    }
+    .investimentos .rigth img {
+        width: 300px;
     }
 }
 
 @media (max-width: 1024px) {
-    
     .consultor {
-        background-image: url(../images/mainBackMobile.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        
+        margin-top: 50px;
+        flex-wrap: wrap;
+        background: linear-gradient(to bottom, rgba(255,255,255,0.56) 0%, rgba(255,255,255,0.56) 29%, rgba(234,80,65,0.56) 72%, rgba(231,56,39,0.63) 78%, rgba(231,56,39,0.87) 100%);
+    }
+    .consultor .left{
+        align-items: center;
     }
     .colabore {
         flex-wrap: wrap;
     }
-    .colabore .video {
-        width: 100%;
+    .colabore .texts {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 300px;
     }
     .investimentos {
         padding: 1rem;
         white-space: normal;
         flex-wrap: wrap;
-        background: linear-gradient(180deg, #F1F3F8 50%, #539D71 50%);
+        background: linear-gradient(3000deg, #F1F3F8 50%, #c04106 50%);
         justify-content: center;
         align-items: center;
     }
     .investimentos .left {
         padding: 2rem;
+        max-width: 500px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     .img-plant {
         justify-content: center;
@@ -331,7 +387,6 @@ a {
     .alimentos {
         justify-content: center;
         flex-wrap: wrap;
-        background: linear-gradient(180deg, #D8D8D8 50%, #FDB66B 50%);
     }
     .alimentos .left {
         padding: 4rem 50px 0 50px;
@@ -340,16 +395,16 @@ a {
         padding: 4rem 0;
     }
     .alimentos .rigth img {
-        width: 600px;
+        width: 200px;
         margin: 0 50px;
+    }
+    .investimentos {
+        justify-content: center;
+        align-items: center;
     }
 }
 
 @media (max-width: 768px) {
-    .alimentos .rigth img {
-        width: 100%;
-        margin: 0;
-    }
     .img-plant img {
         width: 100%;
     }
@@ -393,7 +448,6 @@ a {
         min-height: 60vh;
     }
     .alimentos {
-        background: linear-gradient(180deg, #D8D8D8 80%, #FDB66B 20%);
         padding: 10px;
         min-height: 60vh;
     }
@@ -405,15 +459,17 @@ a {
         padding: 0;
     }
     .alimentos .rigth img {
-        content: url("../images/biomaMainMobile.png");
-        margin: 0;
-
+        width: 200px;
+        margin: 20px;
     }
     .colabore {
         flex-wrap: wrap;
         padding: 50px 15px;
         min-height: 60vh;
         text-align: center;
+    }
+    .colabore .video {
+        width: 270px;
     }
     .investimentos {
         padding: 3rem 1rem;
@@ -432,7 +488,6 @@ a {
     }
     .investimentos .rigth img {
         width: 100%;
-        content: url("../images/wallet.png");
     }
     .lista h6 {
         flex-direction: column;
